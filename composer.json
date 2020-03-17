@@ -1,0 +1,21 @@
+{
+    "name": "forged-ui/deployment-hook",
+    "license": "proprietary",
+    "require": {
+        "vlucas/phpdotenv": "^4.1",
+        "pusher/pusher-php-server": "^4.1",
+        "ext-json": "*"
+    },
+    "authors": [
+        {
+            "name": "Owen Melbourne",
+            "email": "hello@forged-ui.com"
+        }
+    ],
+    "require-dev": {
+        "symfony/var-dumper": "^5.0",
+        "kitetail/zttp": "^0.6.0",
+        "themsaid/forge-sdk": "^2.0",
+        "illuminate/support": "^7.1"
+    }
+}
