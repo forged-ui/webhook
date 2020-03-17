@@ -1,12 +1,10 @@
 <?php
 
-use Pusher\Pusher;
-
 require_once __DIR__ . '/vendor/autoload.php';
 
 (Dotenv\Dotenv::createImmutable(__DIR__))->load();
 
-$pusher = new Pusher(
+$pusher = new Pusher\Pusher(
     getenv('PUSHER_KEY'),
     getenv('PUSHER_SECRET'),
     getenv('PUSHER_APP'),
@@ -16,7 +14,7 @@ $pusher = new Pusher(
     ]
 );
 
-if ($json = json_decode(file_get_contents("php://input"), true)) {
+if ($json = @json_decode(file_get_contents("php://input"), true)) {
     $payload = $json;
 } else {
     $payload = $_POST;
